@@ -1,0 +1,7 @@
+!README.md
+!Makefile
+!*.c
+/deposit-calc
+/src/*.*
+!/src/*.h
+!/src/*.c
