@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 #include "deposit.h"
 
 int Chek(int v, int s) {

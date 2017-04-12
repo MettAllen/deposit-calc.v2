@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "deposit.h"
 
 int main() {
     int a, b;

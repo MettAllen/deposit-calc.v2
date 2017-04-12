@@ -1,6 +1,5 @@
 CFLAGS = -Wall -Werror -MP -MMD
 SOURCES = src/main.c src/deposit.c
-OBJECTS = $(SOURCES:.c=.o)
 .PHONY: clean all deposit-calc
 
 all :
