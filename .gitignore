@@ -12,4 +12,3 @@
 #DIRs_TEST
 /test/*.*
 !/test/*.c
-

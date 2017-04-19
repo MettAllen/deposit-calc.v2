@@ -30,7 +30,7 @@ CTEST(calc_first_test, calc)
     double result = calc_result(123650,145);
     
     const double expected = 133542;
-    ASSERT_DBL_NEAR(expected, result);
+    ASSERT_EQUAL(expected, result);
 }
 
 ///////////////////////////
@@ -41,7 +41,7 @@ CTEST(day<_0_calc, calc) // корректность ввода значения времени
 
     const double expected = 0;
 
-    ASSERT_DBL_NEAR(expected, result);
+    ASSERT_EQUAL(expected, result);
 }
 
 CTEST(day>_365_calc, calc)
@@ -50,7 +50,7 @@ CTEST(day>_365_calc, calc)
 
     const double expected = 0;
 
-    ASSERT_DBL_NEAR(expected, result);
+    ASSERT_EQUAL(expected, result);
 }
 
 ///////////////////////////////////////
@@ -60,7 +60,7 @@ CTEST(day=31_calc<100000_rub, calc)  // Проверка вычисления доходности влкадов
     double result = calc_result(30000, 31);
     const double exp = 30600;
 
-    ASSERT_DBL_NEAR(exp, result);
+    ASSERT_EQUAL(exp, result);
 }
 
 CTEST(day=31_calc>100000_rub, calc)
@@ -68,7 +68,7 @@ CTEST(day=31_calc>100000_rub, calc)
     double result = calc_result(135000, 31);
     const double exp = 137700;
 
-    ASSERT_DBL_NEAR(exp, result);
+    ASSERT_EQUAL(exp, result);
 }
 
 CTEST(day=120_calc<100000_rub, calc)
@@ -76,7 +76,7 @@ CTEST(day=120_calc<100000_rub, calc)
     double result = calc_result(3000, 31);
     const double exp = 30600;
 
-    ASSERT_DBL_NEAR(exp, result);
+    ASSERT_EQUAL(exp, result);
 }
 
 CTEST(day=120_calc>100000_rub, calc)
@@ -84,7 +84,7 @@ CTEST(day=120_calc>100000_rub, calc)
     double result = calc_result(135000, 31);
     const double exp = 137700;
 
-    ASSERT_DBL_NEAR(exp, result);
+    ASSERT_EQUAL(exp, result);
 }
 
 CTEST(day=121_calc<100000_rub, calc)
@@ -92,7 +92,7 @@ CTEST(day=121_calc<100000_rub, calc)
     double result = calc_result(30000, 121);
     const double exp = 31800;
 
-    ASSERT_DBL_NEAR(exp, result);
+    ASSERT_EQUAL(exp, result);
 }
 
 CTEST(day=121_calc>100000_rub, calc)
@@ -100,7 +100,7 @@ CTEST(day=121_calc>100000_rub, calc)
     double result = calc_result(135000, 121);
     const double exp = 145800;
 
-    ASSERT_DBL_NEAR(exp, result);
+    ASSERT_EQUAL(exp, result);
 }
 
 CTEST(day=240_calc<100000_rub, calc)
@@ -108,7 +108,7 @@ CTEST(day=240_calc<100000_rub, calc)
     double result = calc_result(30000, 121);
     const double exp = 31800;
 
-    ASSERT_DBL_NEAR(exp, result);
+   ASSERT_EQUAL(exp, result);
 }
 
 CTEST(day=240_calc>100000_rub, calc)
@@ -116,7 +116,7 @@ CTEST(day=240_calc>100000_rub, calc)
     double result = calc_result(130000, 121);
     const double exp = 145800;
 
-    ASSERT_DBL_NEAR(exp, result);
+    ASSERT_EQUAL(exp, result);
 }
 
 CTEST(day=241_calc<100000_rub, calc)
@@ -124,7 +124,7 @@ CTEST(day=241_calc<100000_rub, calc)
     double result = calc_result(30000, 241);
     const double exp = 33600;
 
-    ASSERT_DBL_NEAR(exp, result);
+    ASSERT_EQUAL(exp, result);
 }
 
 CTEST(day=241_calc>100000_rub, calc)
@@ -132,7 +132,7 @@ CTEST(day=241_calc>100000_rub, calc)
     double result = calc_result(135000, 241);
     const double exp = 151200;
 
-    ASSERT_DBL_NEAR(exp, result);
+    ASSERT_EQUAL(exp, result);
 }
 
 CTEST(day=365_calc<100000_rub, calc)
@@ -140,7 +140,7 @@ CTEST(day=365_calc<100000_rub, calc)
     double result = calc_result(30000, 241);
     const double exp = 33600;
 
-    ASSERT_DBL_NEAR(exp, result);
+    ASSERT_EQUAL(exp, result);
 }
 
 CTEST(day=365_calc>100000_rub, calc)
@@ -148,5 +148,5 @@ CTEST(day=365_calc>100000_rub, calc)
     double result = calc_result(135000, 241);
     const double exp = 151200;
 
-    ASSERT_DBL_NEAR(exp, result);
+    ASSERT_EQUAL(exp, result);
 }
