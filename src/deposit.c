@@ -13,7 +13,7 @@ int Chek(int v, int s) {
     return 0;
 };
 
-void Dohod(int v, int s) {
+double Dohod(int v, int s) {
     if (v > 100000) {
         if (s <= 30)
             v = v - v / 10;
@@ -37,5 +37,5 @@ void Dohod(int v, int s) {
     }
 
     printf("\ndohod=%d\n", v);
-
+    return v;
 };

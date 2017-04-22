@@ -11,123 +11,123 @@ CTEST(input_check, test_input)
 
 CTEST(calc_test, calc)
 {
-    void result = Dohod(123400,140);
+    double result = Dohod(123400,140);
     
-    const void expected = 133272;
-    ASSERT_EQUAL(expected, result);
+    const double expected = 133272;
+    ASSERT_DBL_NEAR(expected, result);
 }
 
 CTEST(calc_less0_days, calc)
 {
-    void result = Dohod(22222, -5);
+    double result = Dohod(22222, -5);
 
-    const void expected = 0;
+    const double expected = 0;
 
-    ASSERT_EQUAL(expected, result);
+    ASSERT_DBL_NEAR(expected, result);
 }
 
 CTEST(calc_more365_days, calc)
 {
-    void result = Dohod(22222, 366);
+    double result = Dohod(22222, 366);
 
-    const void expected = 0;
+    const double expected = 0;
 
-    ASSERT_EQUAL(expected, result);
+    ASSERT_DBL_NEAR(expected, result);
 }
 /////////////////////////////////
 CTEST(calc_31_day_less_100000_rub, calc)
 {
-    void result = Dohod(50000, 31);
-    const void exp = 51000;
+    double result = Dohod(50000, 31);
+    const double exp = 51000;
 
-    ASSERT_EQUAL(exp, result);
+    ASSERT_DBL_NEAR(exp, result);
 }
 
 CTEST(calc_31_day_more_100000_rub, calc)
 {
-    void result = Dohod(150000, 31);
-    const void exp = 154500;
+    double result = Dohod(150000, 31);
+    const double exp = 154500;
 
-    ASSERT_EQUAL(exp, result);
+    ASSERT_DBL_NEAR(exp, result);
 }
 /////////////////////////////////
 CTEST(calc_120_day_less_100000_rub, calc)
 {
-    void result = Dohod(50000, 31);
-    const void exp = 51000;
+    double result = Dohod(50000, 31);
+    const double exp = 51000;
 
-    ASSERT_EQUAL(exp, result);
+    ASSERT_DBL_NEAR(exp, result);
 }
 
 CTEST(calc_120_day_more_100000_rub, calc)
 {
-    void result = Dohod(150000, 31);
-    const void exp = 154500;
+    double result = Dohod(150000, 31);
+    const double exp = 154500;
 
-    ASSERT_EQUAL(exp, result);
+    ASSERT_DBL_NEAR(exp, result);
 }
 /////////////////////////////////
 CTEST(calc_121_day_less_100000_rub, calc)
 {
-    void result = Dohod(50000, 121);
-    const void exp = 53000;
+    double result = Dohod(50000, 121);
+    const double exp = 53000;
 
-    ASSERT_EQUAL(exp, result);
+    ASSERT_DBL_NEAR(exp, result);
 }
 
 CTEST(calc_121_day_more_100000_rub, calc)
 {
-    void result = Dohod(150000, 121);
-    const void exp = 162000;
+    double result = Dohod(150000, 121);
+    const double exp = 162000;
 
-    ASSERT_EQUAL(exp, result);
+    ASSERT_DBL_NEAR(exp, result);
 }
 /////////////////////////////////
 CTEST(calc_240_day_less_100000_rub, calc)
 {
-    void result = Dohod(50000, 121);
-    const void exp = 53000;
+    double result = Dohod(50000, 121);
+    const double exp = 53000;
 
-    ASSERT_EQUAL(exp, result);
+    ASSERT_DBL_NEAR(exp, result);
 }
 
 CTEST(calc_240_day_more_100000_rub, calc)
 {
-    void result = Dohod(150000, 121);
-    const void exp = 162000;
+    double result = Dohod(150000, 121);
+    const double exp = 162000;
 
-    ASSERT_EQUAL(exp, result);
+    ASSERT_DBL_NEAR(exp, result);
 }
 /////////////////////////////////
 CTEST(calc_241_day_less_100000_rub, calc)
 {
-    void result = Dohod(50000, 241);
-    const void exp = 56000;
+    double result = Dohod(50000, 241);
+    const double exp = 56000;
 
-    ASSERT_EQUAL(exp, result);
+    ASSERT_DBL_NEAR(exp, result);
 }
 
 CTEST(calc_241_day_more_100000_rub, calc)
 {
-    void result = Dohod(150000, 241);
-    const void exp = 172500;
+    double result = Dohod(150000, 241);
+    const double exp = 172500;
 
-    ASSERT_EQUAL(exp, result);
+    ASSERT_DBL_NEAR(exp, result);
 }
 /////////////////////////////////
 
 CTEST(calc_365_day_less_100000_rub, calc)
 {
-    void result = Dohod(50000, 241);
-    const void exp = 56000;
+    double result = Dohod(50000, 241);
+    const double exp = 56000;
 
-    ASSERT_EQUAL(exp, result);
+    ASSERT_DBL_NEAR(exp, result);
 }
 
 CTEST(calc_365_day_more_100000_rub, calc)
 {
-    void result = Dohod(150000, 241);
-    const void exp = 172500;
+    double result = Dohod(150000, 241);
+    const double exp = 172500;
 
-    ASSERT_EQUAL(exp, result);
+    ASSERT_DBL_NEAR(exp, result);
 }
