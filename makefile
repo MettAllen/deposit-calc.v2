@@ -25,7 +25,6 @@ build/test/main.o : src/deposit.h test/main.c
 	@gcc -I thirdparty -c test/main.c -o build/test/main.o $(CFLAGS)
 	@gcc -c src/deposit.c -o build/test/deposit.o $(CFLAGS) 
 
-	
 build/test/deposit-test.o : src/deposit.h test/deposit-test.c
     @gcc -c -I thirdparty test/deposit-test.c -o build/test/deposit-test.o $(CFLAGS)
 	
@@ -38,4 +37,4 @@ clean :
 	@rm bin/deposit-calc bin/deposit-calc-test
 	@echo "All files have been cleaned."
 	
--include build/*.d			
+-include build/*.d
