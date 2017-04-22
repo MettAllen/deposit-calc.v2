@@ -3,7 +3,7 @@
 
 CTEST(input_check, test_input)
 {
-    int result = Check(1234827, 231);
+    int result = Chek(1234827, 231);
     
     int expected = 1;
     ASSERT_EQUAL(expected, result);
