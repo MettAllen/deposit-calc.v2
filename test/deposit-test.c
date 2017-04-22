@@ -11,7 +11,7 @@ CTEST(input_check, test_input)
 
 CTEST(calc_test, calc)
 {
-    int result = Dohod(123400,140);
+    void result = Dohod(123400,140);
     
     const void expected = 133272;
     ASSERT_EQUAL(expected, result);
