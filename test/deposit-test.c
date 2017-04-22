@@ -19,7 +19,7 @@ CTEST(calc_test, calc)
 
 ///////////////////////////
 
-CTEST(day<_0_calc, calc) // корректность ввода значения времени
+CTEST(day_less_0_calc, calc) // корректность ввода значения времени
 {
     int result = Dohod(265685, -5);
 
@@ -28,7 +28,7 @@ CTEST(day<_0_calc, calc) // корректность ввода значения времени
     ASSERT_EQUAL(expected, result);
 }
 
-CTEST(day>_365_calc, calc)
+CTEST(day_more_365_calc, calc)
 {
     int result = Dohod(256854, 366);
 
@@ -39,7 +39,7 @@ CTEST(day>_365_calc, calc)
 
 ///////////////////////////////////////
 
-CTEST(day=31_calc<100000_rub, calc)  // Проверка вычисления доходности влкадов 
+CTEST(day_31_calc_less_100000_rub, calc)  // Проверка вычисления доходности влкадов 
 {
     int result = Dohod(30000, 31);
     const int exp = 30600;
@@ -47,7 +47,7 @@ CTEST(day=31_calc<100000_rub, calc)  // Проверка вычисления доходности влкадов
     ASSERT_EQUAL(exp, result);
 }
 
-CTEST(day=31_calc>100000_rub, calc)
+CTEST(day_31_calc_more_100000_rub, calc)
 {
     int result = Dohod(135000, 31);
     const int exp = 137700;
@@ -55,7 +55,7 @@ CTEST(day=31_calc>100000_rub, calc)
     ASSERT_EQUAL(exp, result);
 }
 
-CTEST(day=120_calc<100000_rub, calc)
+CTEST(day_120_calc_less_100000_rub, calc)
 {
     int result = Dohod(3000, 31);
     const int exp = 30600;
@@ -63,7 +63,7 @@ CTEST(day=120_calc<100000_rub, calc)
     ASSERT_EQUAL(exp, result);
 }
 
-CTEST(day=120_calc>100000_rub, calc)
+CTEST(day_120_calc_more_100000_rub, calc)
 {
     int result = Dohod(135000, 31);
     const int exp = 137700;
@@ -71,7 +71,7 @@ CTEST(day=120_calc>100000_rub, calc)
     ASSERT_EQUAL(exp, result);
 }
 
-CTEST(day=121_calc<100000_rub, calc)
+CTEST(day_121_calc_less_100000_rub, calc)
 {
     int result = Dohod(30000, 121);
     const int exp = 31800;
@@ -79,7 +79,7 @@ CTEST(day=121_calc<100000_rub, calc)
     ASSERT_EQUAL(exp, result);
 }
 
-CTEST(day=121_calc>100000_rub, calc)
+CTEST(day_121_calc_more_100000_rub, calc)
 {
     int result = Dohod(135000, 121);
     const int exp = 145800;
@@ -87,7 +87,7 @@ CTEST(day=121_calc>100000_rub, calc)
     ASSERT_EQUAL(exp, result);
 }
 
-CTEST(day=240_calc<100000_rub, calc)
+CTEST(day_240_calc_less_100000_rub, calc)
 {
     int result = Dohod(30000, 121);
     const int exp = 31800;
@@ -95,7 +95,7 @@ CTEST(day=240_calc<100000_rub, calc)
    ASSERT_EQUAL(exp, result);
 }
 
-CTEST(day=240_calc>100000_rub, calc)
+CTEST(day_240_calc_more_100000_rub, calc)
 {
     int result = Dohod(130000, 121);
     const int exp = 145800;
@@ -103,7 +103,7 @@ CTEST(day=240_calc>100000_rub, calc)
     ASSERT_EQUAL(exp, result);
 }
 
-CTEST(day=241_calc<100000_rub, calc)
+CTEST(day_241_calc_less_100000_rub, calc)
 {
     int result = Dohod(30000, 241);
     const int exp = 33600;
@@ -111,7 +111,7 @@ CTEST(day=241_calc<100000_rub, calc)
     ASSERT_EQUAL(exp, result);
 }
 
-CTEST(day=241_calc>100000_rub, calc)
+CTEST(day_241_calc_more_100000_rub, calc)
 {
     int result = Dohod(135000, 241);
     const int exp = 151200;
@@ -119,7 +119,7 @@ CTEST(day=241_calc>100000_rub, calc)
     ASSERT_EQUAL(exp, result);
 }
 
-CTEST(day=365_calc<100000_rub, calc)
+CTEST(day_365_calc_less_100000_rub, calc)
 {
     int result = Dohod(30000, 241);
     const int exp = 33600;
@@ -127,7 +127,7 @@ CTEST(day=365_calc<100000_rub, calc)
     ASSERT_EQUAL(exp, result);
 }
 
-CTEST(day=365_calc>100000_rub, calc)
+CTEST(day_365_calc_more_100000_rub, calc)
 {
     int result = Dohod(135000, 241);
     const int exp = 151200;
