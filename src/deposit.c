@@ -4,13 +4,13 @@
 int Chek(int v, int s) {
     if (v < 10000) {
         printf("\n ne verno ukazan deposit \n");
-        return 1;
+        return 0;
     }
     if (s <= 0 || s > 365) {
         printf("\n ne verno ukazan period \n");
-        return 1;
+        return 0;
     }
-    return 0;
+    return 1;
 };
 
 double Dohod(int v, int s) {

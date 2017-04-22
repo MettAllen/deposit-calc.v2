@@ -17,23 +17,6 @@ CTEST(calc_test, calc)
     ASSERT_DBL_NEAR(expected, result);
 }
 
-CTEST(calc_less0_days, calc)
-{
-    double result = Dohod(22222, -5);
-
-    const double expected = 0;
-
-    ASSERT_DBL_NEAR(expected, result);
-}
-
-CTEST(calc_more365_days, calc)
-{
-    double result = Dohod(22222, 366);
-
-    const double expected = 0;
-
-    ASSERT_DBL_NEAR(expected, result);
-}
 /////////////////////////////////
 CTEST(calc_31_day_less_100000_rub, calc)
 {
