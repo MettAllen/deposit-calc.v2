@@ -2,7 +2,7 @@
 
 #include <ctest.h>
 
-int main(int a,int b)
+int main(int argc, const char** argv)
 {
-    return ctest_main(a, b);
+    return ctest_main(argc, argv);
 }
