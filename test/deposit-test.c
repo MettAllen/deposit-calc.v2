@@ -1,9 +1,9 @@
 #include <ctest.h>
 #include <../src/deposit.h>
 
-CTEST(chek_validation, test_input)
+CTEST(input_check, test_input)
 {
-    int result = Chek(269857, 231);
+    int result = Check(1234827, 231);
     
     int expected = 1;
     ASSERT_EQUAL(expected, result);
@@ -11,126 +11,123 @@ CTEST(chek_validation, test_input)
 
 CTEST(calc_test, calc)
 {
-    int result = Dohod(123650,145);
+    double result = Dohod(123400,140);
     
-    const int expected = 133542;
+    const double expected = 133272;
     ASSERT_EQUAL(expected, result);
 }
 
-///////////////////////////
-
-CTEST(day_less_0_calc, calc) // корректность ввода значения времени
+CTEST(calc_less0_days, calc)
 {
-    int result = Dohod(265685, -5);
+    double result = Dohod(22222, -5);
 
-    const int expected = 0;
-
-    ASSERT_EQUAL(expected, result);
-}
-
-CTEST(day_more_365_calc, calc)
-{
-    int result = Dohod(256854, 366);
-
-    const int expected = 0;
+    const double expected = 0;
 
     ASSERT_EQUAL(expected, result);
 }
 
-///////////////////////////////////////
-
-CTEST(day_31_calc_less_100000_rub, calc)  // Проверка вычисления доходности влкадов 
+CTEST(calc_more365_days, calc)
 {
-    int result = Dohod(30000, 31);
-    const int exp = 30600;
+    double result = Dohod(22222, 366);
+
+    const double expected = 0;
+
+    ASSERT_EQUAL(expected, result);
+}
+/////////////////////////////////
+CTEST(calc_31_day_less_100000_rub, calc)
+{
+    double result = Dohod(50000, 31);
+    const double exp = 51000;
 
     ASSERT_EQUAL(exp, result);
 }
 
-CTEST(day_31_calc_more_100000_rub, calc)
+CTEST(calc_31_day_more_100000_rub, calc)
 {
-    int result = Dohod(135000, 31);
-    const int exp = 137700;
+    double result = Dohod(150000, 31);
+    const double exp = 154500;
+
+    ASSERT_EQUAL(exp, result);
+}
+/////////////////////////////////
+CTEST(calc_120_day_less_100000_rub, calc)
+{
+    double result = Dohod(50000, 31);
+    const double exp = 51000;
 
     ASSERT_EQUAL(exp, result);
 }
 
-CTEST(day_120_calc_less_100000_rub, calc)
+CTEST(calc_120_day_more_100000_rub, calc)
 {
-    int result = Dohod(3000, 31);
-    const int exp = 30600;
+    double result = Dohod(150000, 31);
+    const double exp = 154500;
+
+    ASSERT_EQUAL(exp, result);
+}
+/////////////////////////////////
+CTEST(calc_121_day_less_100000_rub, calc)
+{
+    double result = Dohod(50000, 121);
+    const double exp = 53000;
 
     ASSERT_EQUAL(exp, result);
 }
 
-CTEST(day_120_calc_more_100000_rub, calc)
+CTEST(calc_121_day_more_100000_rub, calc)
 {
-    int result = Dohod(135000, 31);
-    const int exp = 137700;
+    double result = Dohod(150000, 121);
+    const double exp = 162000;
+
+    ASSERT_EQUAL(exp, result);
+}
+/////////////////////////////////
+CTEST(calc_240_day_less_100000_rub, calc)
+{
+    double result = Dohod(50000, 121);
+    const double exp = 53000;
 
     ASSERT_EQUAL(exp, result);
 }
 
-CTEST(day_121_calc_less_100000_rub, calc)
+CTEST(calc_240_day_more_100000_rub, calc)
 {
-    int result = Dohod(30000, 121);
-    const int exp = 31800;
+    double result = Dohod(150000, 121);
+    const double exp = 162000;
+
+    ASSERT_EQUAL(exp, result);
+}
+/////////////////////////////////
+CTEST(calc_241_day_less_100000_rub, calc)
+{
+    double result = Dohod(50000, 241);
+    const double exp = 56000;
 
     ASSERT_EQUAL(exp, result);
 }
 
-CTEST(day_121_calc_more_100000_rub, calc)
+CTEST(calc_241_day_more_100000_rub, calc)
 {
-    int result = Dohod(135000, 121);
-    const int exp = 145800;
+    double result = Dohod(150000, 241);
+    const double exp = 172500;
+
+    ASSERT_EQUAL(exp, result);
+}
+/////////////////////////////////
+
+CTEST(calc_365_day_less_100000_rub, calc)
+{
+    double result = Dohod(50000, 241);
+    const double exp = 56000;
 
     ASSERT_EQUAL(exp, result);
 }
 
-CTEST(day_240_calc_less_100000_rub, calc)
+CTEST(calc_365_day_more_100000_rub, calc)
 {
-    int result = Dohod(30000, 121);
-    const int exp = 31800;
-
-   ASSERT_EQUAL(exp, result);
-}
-
-CTEST(day_240_calc_more_100000_rub, calc)
-{
-    int result = Dohod(130000, 121);
-    const int exp = 145800;
-
-    ASSERT_EQUAL(exp, result);
-}
-
-CTEST(day_241_calc_less_100000_rub, calc)
-{
-    int result = Dohod(30000, 241);
-    const int exp = 33600;
-
-    ASSERT_EQUAL(exp, result);
-}
-
-CTEST(day_241_calc_more_100000_rub, calc)
-{
-    int result = Dohod(135000, 241);
-    const int exp = 151200;
-
-    ASSERT_EQUAL(exp, result);
-}
-
-CTEST(day_365_calc_less_100000_rub, calc)
-{
-    int result = Dohod(30000, 241);
-    const int exp = 33600;
-
-    ASSERT_EQUAL(exp, result);
-}
-
-CTEST(day_365_calc_more_100000_rub, calc)
-{
-    int result = Dohod(135000, 241);
-    const int exp = 151200;
+    double result = Dohod(150000, 241);
+    const double exp = 172500;
 
     ASSERT_EQUAL(exp, result);
 }
