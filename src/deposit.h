@@ -3,6 +3,6 @@
 
 int Chek(int v, int s);
 
-void Dohod(int v, int s);
+double Dohod(int v, int s);
 
 #endif
