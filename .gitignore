@@ -10,5 +10,5 @@
 /thirdparty/*.*
 !/thirdparty/ctest.h
 #DIRs_TEST
-
+/test/*.*
 !/test/*.c
