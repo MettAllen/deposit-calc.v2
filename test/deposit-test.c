@@ -115,8 +115,8 @@ CTEST(calc_365_day_more_100000_rub, calc)
 
 CTEST(all_test_sestim, calc)
 {
-    double result = Dohod(150000, 241);
-    const double exp = 172500;
+    double result = Dohod(50000, 241);
+    const double exp = 56000;
     
 
     ASSERT_DBL_NEAR(exp, result);
