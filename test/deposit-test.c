@@ -17,7 +17,6 @@ CTEST(calc_test, calc)
     ASSERT_DBL_NEAR(expected, result);
 }
 
-/////////////////////////////////
 CTEST(calc_31_day_less_100000_rub, calc)
 {
     double result = Dohod(50000, 31);
@@ -33,7 +32,7 @@ CTEST(calc_31_day_more_100000_rub, calc)
 
     ASSERT_DBL_NEAR(exp, result);
 }
-/////////////////////////////////
+
 CTEST(calc_120_day_less_100000_rub, calc)
 {
     double result = Dohod(50000, 31);
@@ -49,7 +48,7 @@ CTEST(calc_120_day_more_100000_rub, calc)
 
     ASSERT_DBL_NEAR(exp, result);
 }
-/////////////////////////////////
+
 CTEST(calc_121_day_less_100000_rub, calc)
 {
     double result = Dohod(50000, 121);
@@ -65,7 +64,7 @@ CTEST(calc_121_day_more_100000_rub, calc)
 
     ASSERT_DBL_NEAR(exp, result);
 }
-/////////////////////////////////
+
 CTEST(calc_240_day_less_100000_rub, calc)
 {
     double result = Dohod(50000, 121);
@@ -81,7 +80,7 @@ CTEST(calc_240_day_more_100000_rub, calc)
 
     ASSERT_DBL_NEAR(exp, result);
 }
-/////////////////////////////////
+
 CTEST(calc_241_day_less_100000_rub, calc)
 {
     double result = Dohod(50000, 241);
@@ -97,7 +96,6 @@ CTEST(calc_241_day_more_100000_rub, calc)
 
     ASSERT_DBL_NEAR(exp, result);
 }
-/////////////////////////////////
 
 CTEST(calc_365_day_less_100000_rub, calc)
 {
@@ -113,4 +111,18 @@ CTEST(calc_365_day_more_100000_rub, calc)
     const double exp = 172500;
 
     ASSERT_DBL_NEAR(exp, result);
+}
+
+CTEST(all_test_sestim, calc)
+{
+    double result = Dohod(150000, 241);
+    const double exp = 172500;
+    
+
+    ASSERT_DBL_NEAR(exp, result);
+    
+     double result2 = Dohod(150000, 241);
+    const double exp2 = 172500;
+
+    ASSERT_DBL_NEAR(exp2, result2);
 }
