@@ -113,16 +113,20 @@ CTEST(calc_365_day_more_100000_rub, calc)
     ASSERT_DBL_NEAR(exp, result);
 }
 
-CTEST(all_test_sestim, calc)
+CTEST(all_test_more_100k, calc)
 {
     double result = Dohod(50000, 241);
     const double exp = 56000;
     
-
     ASSERT_DBL_NEAR(exp, result);
-    
-     double result2 = Dohod(150000, 241);
-    const double exp2 = 172500;
+/////////////////
+    double result2 = Dohod(150000, 31);
+    const double exp2 = 154500;
 
-    ASSERT_DBL_NEAR(exp2, result2);
+    ASSERT_DBL_NEAR(exp2, result3);
+/////////////////
+    double result3 = Dohod(150000, 31);
+    const double exp3 = 154500;
+
+    ASSERT_DBL_NEAR(exp3, result3);
 }
