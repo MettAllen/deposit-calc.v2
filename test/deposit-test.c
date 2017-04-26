@@ -10,6 +10,21 @@ CTEST(input_check, test_input)
     ASSERT_EQUAL(expected, result);
 }
 
+CTEST(input_check_less_0_day, test_input)
+{
+    int result = Chek(1234827, -10);
+    
+    int expected = 0;
+    ASSERT_EQUAL(expected, result);
+}
+
+CTEST(input_check_more_1_year, test_input)
+{
+    int result = Chek(1234827, 760);
+    
+    int expected = 0;
+    ASSERT_EQUAL(expected, result);
+}
 CTEST(calc_test, calc)
 {
     double result = Dohod(123400,140);
